@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Portafolio.la</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/estilo.css">
+    </head>
+    <body>
+        <header id="yo" class="Header">
+            <button class="Header-button is-active icon-showMenu" id="showMenu"></button>
+            <button class="Header-button icon-hideMenu" id="hideMenu"></button>
+            <nav class="MainMenu" id="menu">
+                <ul class="MainMenu-list">
+                    <li class="MainMenu-item">
+                        <a class="MainMenu-link" href="#yo">Yo</a>
+                    </li>
+                    <li class="MainMenu-item">
+                        <a class="MainMenu-link" href="#perfil">Perfil</a>
+                    </li>
+                    <li class="MainMenu-item">
+                        <a class="MainMenu-link" href="#trabajo">Trabajo</a>
+                    </li>
+                    <li class="MainMenu-item">
+                        <a class="MainMenu-link" href="#contacto">Contacto</a>
+                    </li>
+                    <li class="MainMenu-item">
+                      <a href="" class="MainMenu-link"> Informacion </a>
+                    </li>
+                </ul>
+            </nav>
+            <figure class="Header-imageContainer">
+                <img src="images/avatar.jpg" alt="Imagen personal" class="Header-image"/>
+                <figcaption class="Header-imageDescription">
+                    <a class="Header-link" href="https://twitter.com/JosueEchandiaA" target="_black">@JosueEchandiaA</a>
+                </figcaption>
+            </figure>
+            <p class="Header-name" >Josue Echandia A</p>
+        </header>
+        <section id="perfil" class="Profile">
+            <div class="u-containerDefault">
+                <h2 class="Profile-title u-title">Mi perfil</h2>
+                <p class="Profile-description">
+                    <strong>Hola!</strong> si <span class="Profile-span">llegaste</span> hasta aqui puedes ver mi portafolio y <em>contactarme</em>
+                </p>
+                <a class="Profile-link twitter icon-twitter" href="https://twitter.com/JosueEchandiaA" target="_blank">@JosueEchandiaA</a>
+                <a class="Profile-link facebook icon-facebook" href="https://www.facebook.com/josuemanuel.echandiaasto" target="_blank">JosueEchandiaAsto</a>
+                <a class="Profile-link github icon-github" href="https://github.com/JosueEchandiaAsto" target="_blank">JosueEchandiaAsto</a>
+            </div>
+        </section>
+        <!-- <section class="Slider">
+          <div class="Slider-container">
+            <ul class="rslides">
+              <li><img src="images/mexico.jpg"  width="1024" height="400" alt="Conferencia Mexico Df"></li>
+              <li><img src="images/colombia.jpg" width="1024" height="400" alt="Conferencia Monteria"></li>
+              <li><img src="images/peru.jpg" width="1024" height="400" alt="Conferencia Trujillo"></li>
+            </ul>
+          </div>
+        </section> -->
+        <section id="trabajo" class="Work">
+            <div class="u-containerDefault">
+                <h2 class="Work-title u-title">Mi trabajo</h2>
+            </div>
+            <div class="Work-container u-containerDefault">
+              <article class="Work-item">
+                <a href="http://josueechandiaasto.github.io/GuerraFria" target="_blank">
+                  <figure class="Work-imageContainer">
+                      <img class="Work-image" src="images/mejorandola.jpg" alt="Es la descripcion de mi imagen">
+                      <figcaption class="Work-description">La Guerra Fria</figcaption>
+                  </figure>
+                </a>
+              </article>
+              <article class="Work-item">
+                <a href="http://josueechandiaasto.github.io/Sfotipy" target="_blank">
+                  <figure class="Work-imageContainer">
+                      <img class="Work-image" src="images/mejorandola.jpg" alt="Es la descripcion de mi imagen">
+                      <figcaption class="Work-description">Sfotipy</figcaption>
+                  </figure>
+                </a>
+              </article>
+              <article class="Work-item">
+                <a href="http://josueechandiaasto.github.io/weather" target="_blank">
+                  <figure class="Work-imageContainer">
+                      <img class="Work-image" src="images/mejorandola.jpg" alt="Es la descripcion de mi imagen">
+                      <figcaption class="Work-description">Weather</figcaption>
+                  </figure>
+                </a>
+              </article>
+              <article class="Work-item">
+                <a href="http://josueechandiaasto.github.io/monkeywash" target="_blank">
+                  <figure class="Work-imageContainer">
+                      <img class="Work-image" src="images/mejorandola.jpg" alt="Es la descripcion de mi imagen">
+                      <figcaption class="Work-description">Monkey Wash</figcaption>
+                  </figure>
+                </a>
+              </article>
+            </div>
+        </section>
+        <footer id="contacto" class="Footer">
+            <div class="Footer-left">
+                <h3 class="Footer-title">Contacto</h3>
+                <p class="Footer-description">Si tienes una sugerencia o quieres trabajar conmigo ponte en contacto con este formulario</p>
+            </div>
+            <form class="Footer-form">
+                <input class="Footer-formInput"  type="text" placeholder="Nombre"/>
+                <input class="Footer-formInput" type="email" placeholder="Email"/>
+                <textarea class="Footer-textarea" placeholder="Motivo"></textarea>
+                <button type="submit" class="Footer-button"> Contactarme </button>
+            </form>
+        </footer>
+        <script src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
+        <script src="js/responsiveslider.js"></script>
+        <script src="js/retina.min.js"></script>
+        <script src="js/hamer-min.js"></script>
+        <script>
+          $(function() {
+            $(".rslides").responsiveSlides();
+
+          if(window.matchMedia("(max-width:768px)").matches)
+          {
+            var $buttonShowMenu = document.getElementById("showMenu");
+            var $buttonHideMenu = document.getElementById("hideMenu");
+            var $menu = document.getElementById("menu");
+            var $body = document.querySelector("body");
+
+            var body = new Hammer($body);
+
+            var showMenu = function(){
+              $buttonShowMenu.classList.remove("is-active");
+              $buttonHideMenu.classList.add("is-active");
+              $menu.classList.add("is-active");
+            }
+            var hideMenu = function(){
+              $buttonHideMenu.classList.remove("is-active");
+              $buttonShowMenu.classList.add("is-active");
+              $menu.classList.remove("is-active");
+            }
+            $buttonShowMenu.addEventListener("click", showMenu);
+            $buttonHideMenu.addEventListener("click", hideMenu);
+            body.on('panright',showMenu)
+            body.on('panleft',hideMenu)
+          }else{
+            console.log("eres un ipad o mas")
+          }
+
+          });
+        </script>
+    </body>
+</html>
